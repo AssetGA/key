@@ -1,0 +1,50 @@
+[
+  {
+    "id": "1",
+    "name": "зстиль  номер 1",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  },
+  {
+    "id": "2",
+    "name": "застиль номер 123",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  },
+  {
+    "id": "3",
+    "name": "застиль номер 3",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  },
+  {
+    "id": "4",
+    "name": "застиль номер 4",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  },
+  {
+    "id": "5",
+    "name": "застиль номер 5",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  },
+  {
+    "id": "6",
+    "name": "Зстиль номер 6",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/6.jpg",
+    "type": "style"
+  }
+]

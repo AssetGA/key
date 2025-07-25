@@ -1,10 +1,20 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import NavBar from "./components/NavBar";
+import libertinusMono from "@/fonts/libertinus";
+import Footer from "./components/Footer";
+import StoreProvider from "./StoreProvider";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
   subsets: ["latin"],
+});
+
+const dancingScript = Dancing_Script({
+  subsets: ["latin"],
+  weight: ["400", "500", "700"], // можно указать нужные веса
+  variable: "--font-dancing-script",
 });
 
 const geistMono = Geist_Mono({
@@ -23,11 +33,16 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
-        {children}
+    <html
+      lang="en"
+      className={` ${libertinusMono.variable} ${dancingScript.variable} antialiased text-md`}
+    >
+      <body>
+        <StoreProvider>
+          <NavBar />
+          {children}
+          <Footer />
+        </StoreProvider>
       </body>
     </html>
   );

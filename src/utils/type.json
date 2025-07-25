@@ -1,0 +1,32 @@
+[
+  {
+    "id": "1",
+    "name": "умный замок",
+    "nameUrl": "/smart",
+    "imageUrl": "/img/smart-fone.jpg"
+  },
+  {
+    "id": "2",
+    "name": "замок",
+    "nameUrl": "/lock",
+    "imageUrl": "/img/lock/ciza135.jpeg"
+  },
+  {
+    "id": "3",
+    "name": "круглые дверные ручки",
+    "nameUrl": "/handlesrounded",
+    "imageUrl": "/img/1.jpg"
+  },
+  {
+    "id": "4",
+    "name": "дверные ручки",
+    "nameUrl": "/handles",
+    "imageUrl": "/img/levers-fone.jpg"
+  },
+  {
+    "id": "5",
+    "name": "засовы",
+    "nameUrl": "/bolts",
+    "imageUrl": "/img/1.jpg"
+  }
+]

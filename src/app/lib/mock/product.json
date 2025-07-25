@@ -1,0 +1,128 @@
+[
+  {
+    "id": "0",
+    "name": "Valencia v9",
+    "mark": "Valencia",
+    "country": "Китай",
+    "imageUrl": "/img/smart/valencia110.jpeg",
+    "type": "smart",
+    "price": 110000
+  },
+  {
+    "id": "1",
+    "name": "Врезной замок",
+    "mark": "Border",
+    "country": "Россия",
+    "imageUrl": "/img/lock/border25.jpeg",
+    "type": "lock",
+    "price": 25000
+  },
+  {
+    "id": "2",
+    "name": "Врезной замок",
+    "mark": "Border",
+    "country": "Россия",
+    "imageUrl": "/img/lock/border35.jpeg",
+    "type": "lock",
+    "price": 35000
+  },
+  {
+    "id": "3",
+    "name": "Врезной замок",
+    "mark": "Border",
+    "country": "Россия",
+    "imageUrl": "/img/lock/border36.jpeg",
+    "type": "lock",
+    "price": 36000
+  },
+  {
+    "id": "4",
+    "name": "Врезной замок",
+    "mark": "Ciza",
+    "country": "Италия",
+    "imageUrl": "/img/lock/ciza65.jpeg",
+    "type": "lock",
+    "price": 65000
+  },
+  {
+    "id": "5",
+    "name": "Врезной замок",
+    "mark": "Ciza",
+    "country": "Италия",
+    "imageUrl": "/img/lock/ciza135.jpeg",
+    "type": "lock",
+    "price": 135000
+  },
+  {
+    "id": "6",
+    "name": "Врезной замок",
+    "mark": "Elbor",
+    "country": "Россия",
+    "imageUrl": "/img/lock/elbor22.jpeg",
+    "type": "lock",
+    "price": 22000
+  },
+  {
+    "id": "7",
+    "name": "Врезной замок",
+    "mark": "Gardian",
+    "country": "Россия",
+    "imageUrl": "/img/lock/gardian20.jpeg",
+    "type": "lock",
+    "price": 20000
+  },
+  {
+    "id": "8",
+    "name": "Врезной замок",
+    "mark": "Gardian",
+    "country": "Россия",
+    "imageUrl": "/img/lock/gardian35.jpeg",
+    "type": "lock",
+    "price": 35000
+  },
+  {
+    "id": "9",
+    "name": "Врезной замок",
+    "mark": "Kale",
+    "country": "Турция",
+    "imageUrl": "/img/lock/kale18.jpeg",
+    "type": "lock",
+    "price": 18000
+  },
+  {
+    "id": "10",
+    "name": "Врезной замок",
+    "mark": "Kale",
+    "country": "Турция",
+    "imageUrl": "/img/lock/kale25.jpeg",
+    "type": "lock",
+    "price": 25000
+  },
+  {
+    "id": "11",
+    "name": "Врезной замок",
+    "mark": "Kale",
+    "country": "Турция",
+    "imageUrl": "/img/lock/kale28.jpeg",
+    "type": "lock",
+    "price": 28000
+  },
+  {
+    "id": "12",
+    "name": "Врезной замок",
+    "mark": "Мотем",
+    "country": "Россия",
+    "imageUrl": "/img/lock/motem25.jpeg",
+    "type": "lock",
+    "price": 25000
+  },
+  {
+    "id": "6",
+    "name": "Врезной замок",
+    "mark": "Мотем",
+    "country": "Россия",
+    "imageUrl": "/img/lock/motem28.jpeg",
+    "type": "lock",
+    "price": 28000
+  }
+]
