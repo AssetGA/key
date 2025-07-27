@@ -2,9 +2,7 @@ import Image from "next/image";
 import React from "react";
 import data from "@/utils/type.json"; // путь к файлу
 
-type Props = {};
-
-const ListOfProducts = (props: Props) => {
+const ListOfProducts = () => {
   return (
     <div className="w-full overflow-x-auto mt-20">
       <div className="flex justify-center space-x-6 px-4 py-6 ">

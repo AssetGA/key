@@ -1,9 +1,7 @@
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="container mx-auto w-full pt-45">
       <ul className="flex flex-row">

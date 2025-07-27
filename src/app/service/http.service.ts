@@ -1,24 +1,19 @@
 "use client";
 
 import axios, { AxiosError, AxiosInstance, AxiosResponse } from "axios";
-import configFile from "../../../config/default.json";
+// import configFile from "../../../config/default.json";
 
 // Определяем базовый URL
 const apiUrl = process.env.NEXT_PUBLIC_SITE_URL;
 
-// Типизация для получаемых данных
-interface GenericObject {
-  [key: string]: any;
-}
-
 // Трансформация данных (для firebase или общей обертки)
-function transformData(data: any): any {
-  return data && !data._id
-    ? Object.keys(data).map((key) => ({
-        ...data[key],
-      }))
-    : data;
-}
+// function transformData(data: any): any {
+//   return data && !data._id
+//     ? Object.keys(data).map((key) => ({
+//         ...data[key],
+//       }))
+//     : data;
+// }
 
 // Функция создания axios-инстанса
 export function createHttpWithLang(): AxiosInstance {
@@ -36,9 +31,9 @@ const http = createHttpWithLang();
 // Интерсептор для обработки ответа
 http.interceptors.response.use(
   (res: AxiosResponse): AxiosResponse => {
-    if (configFile.isFireBase) {
-      res.data = { content: transformData(res.data) };
-    }
+    // if (configFile.isFireBase) {
+    //   res.data = { content: transformData(res.data) };
+    // }
     res.data = { content: res.data };
     return res;
   },

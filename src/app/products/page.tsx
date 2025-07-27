@@ -4,8 +4,6 @@ import AboutBlock from "../components/common/AboutBlock";
 import ProductSlider from "../components/common/ProductSlider";
 import Link from "next/link";
 
-type Props = {};
-
 const products = [
   { name: "Умный замок", img: "/img/1.jpg" },
   { name: "Дверная ручка", img: "/img/2.jpg" },
@@ -15,7 +13,7 @@ const products = [
   { name: "Цилиндр", img: "/img/7.jpg" },
 ];
 
-const page = (props: Props) => {
+const page = () => {
   return (
     <div className="container mx-auto w-full pt-45">
       <ul className="flex flex-row">

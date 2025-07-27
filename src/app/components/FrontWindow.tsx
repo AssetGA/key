@@ -3,8 +3,6 @@
 import React, { useEffect, useState } from "react";
 import data from "@/utils/api.json"; // путь к файлу
 
-type Props = {};
-
 type imageType = {
   name: string;
   title: string;
@@ -13,7 +11,7 @@ type imageType = {
   imageUrl: string;
 };
 
-const FrontWindow = (props: Props) => {
+const FrontWindow = () => {
   const [currentIndex, setCurrentIndex] = useState(0);
   const [currentElem, setCurrentElem] = useState<imageType>();
 

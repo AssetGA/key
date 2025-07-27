@@ -67,14 +67,26 @@ export const {
   addProduct,
 } = actions;
 
+// Helper function for type-safe error handling
+function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+  if (typeof error === "string") {
+    return error;
+  }
+  return "An unknown error occurred";
+}
+
 // Thunk для загрузки списка
 export const loadProductList = () => async (dispatch: AppDispatch) => {
   dispatch(productRequested());
   try {
     const { content } = await productService.get();
     dispatch(productReceived(content));
-  } catch (error: any) {
-    dispatch(productRequestFailed(error.message));
+  } catch (error) {
+    const errorMessage = getErrorMessage(error);
+    dispatch(productRequestFailed(errorMessage));
   }
 };
 

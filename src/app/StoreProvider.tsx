@@ -11,7 +11,7 @@ import { loadProductList } from "./store/productSlice";
 
 export default function StoreProvider({ children }: PropsWithChildren) {
   // Типизация useRef для хранилища
-  const storeRef = useRef<Store<RootState, any> | null>(null);
+  const storeRef = useRef<Store<RootState> | null>(null);
 
   if (!storeRef.current) {
     storeRef.current = createStore();

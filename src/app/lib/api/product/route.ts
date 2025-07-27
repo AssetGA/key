@@ -1,10 +1,21 @@
-import { NextRequest, NextResponse } from "next/server";
+import { NextResponse } from "next/server";
 import Product, { IProduct } from "@/app/lib/models/Product";
 import { connectToDatabase } from "@/app/lib/mongodb";
 
 // Типы для продукта и перевода (можно расширить по модели)
 
-export async function GET(request: NextRequest) {
+// Shared error type guard (could be in a separate utils file)
+function getErrorMessage(error: unknown): string {
+  if (error instanceof Error) {
+    return error.message;
+  }
+  if (typeof error === "string") {
+    return error;
+  }
+  return "На сервере произошла ошибка, попробуйте позже.";
+}
+
+export async function GET() {
   await connectToDatabase();
   // const url = new URL(request.url);
   // const lang = url.searchParams.get("lang");
@@ -16,7 +27,7 @@ export async function GET(request: NextRequest) {
     console.error("Server error:", error);
     return NextResponse.json(
       {
-        message: "На сервере произошла ошибка, попробуйте позже.",
+        message: getErrorMessage(error),
       },
       { status: 500 }
     );

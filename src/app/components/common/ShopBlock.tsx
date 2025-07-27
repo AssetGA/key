@@ -2,6 +2,7 @@ import Image from "next/image";
 import React from "react";
 import MotionCarousel from "../MotionCarousel";
 import { fetchProducts } from "@/app/active/products";
+import { IProductType } from "@/app/interface/interface";
 
 type shopProps = {
   title: string;
@@ -10,9 +11,9 @@ type shopProps = {
 };
 
 const ShopBlock = async ({ title, imageUrl, type }: shopProps) => {
-  const products = await fetchProducts();
+  const products: IProductType[] = await fetchProducts();
 
-  const productList = products.filter((elem) => {
+  const productList: IProductType[] = products.filter((elem) => {
     return elem.type === type;
   });
   return (

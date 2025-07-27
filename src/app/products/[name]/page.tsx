@@ -1,16 +1,11 @@
-import AboutBlock from "@/app/components/common/AboutBlock";
 import ContactForm from "@/app/components/ContactForm";
 import ProductGrid from "@/app/components/ProductGrid";
 import Protect from "@/app/components/Protect";
 import Link from "next/link";
 import React from "react";
 
-type Props = {};
-
 interface PageProps {
-  params: {
-    name: string;
-  };
+  params: Promise<{ name: string }>;
 }
 const abouts = [
   {

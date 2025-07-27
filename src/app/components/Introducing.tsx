@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const Introducing = (props: Props) => {
+const Introducing = () => {
   return (
     <div className="container mx-auto bg-teal-100 rounded-xl">
       <div className="flex justify-center mt-20">

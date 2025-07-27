@@ -1,8 +1,6 @@
 import React from "react";
 
-type Props = {};
-
-const FastLink = (props: Props) => {
+const FastLink = () => {
   return (
     <div className="my-3">
       <h2 className="text-2xl text-blue-400 py-5 border-b-2 border-blue-500">

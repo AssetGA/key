@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const AdvertisingBlock = (props: Props) => {
+const AdvertisingBlock = () => {
   return (
     <div className=" w-full mt-20">
       <div className="w-full bg-gray-100">

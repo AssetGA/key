@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const Support = (props: Props) => {
+const Support = () => {
   return (
     <div className="container mx-auto">
       <div className="flex flex-col justify-center ">

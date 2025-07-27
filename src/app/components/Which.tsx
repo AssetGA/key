@@ -1,9 +1,7 @@
 import Image from "next/image";
 import React from "react";
 
-type Props = {};
-
-const Which = (props: Props) => {
+const Which = () => {
   return (
     <div className="w-full container mx-auto bg-gray-100 rounded-2xl">
       <div className="w-full flex flex-row justify-between z-20">

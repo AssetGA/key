@@ -1,11 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import { motion, AnimatePresence } from "framer-motion";
+import { motion } from "framer-motion";
 
 import Image from "next/image";
 import { ChevronLeft, ChevronRight } from "lucide-react";
-import { IProduct } from "../lib/models/Product";
 import { IProductType } from "../interface/interface";
 
 const items = [
@@ -19,7 +18,11 @@ const items = [
 
 const visibleCount = 3;
 
-export default function Carousel({ products }: IProductType[]) {
+type Props = {
+  products: IProductType[];
+};
+
+export default function Carousel({ products }: Props) {
   const [index, setIndex] = useState(0);
   const maxIndex = items.length - visibleCount;
 

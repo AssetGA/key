@@ -1,15 +1,15 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Dancing_Script } from "next/font/google";
+import { Dancing_Script } from "next/font/google";
 import "./globals.css";
 import NavBar from "./components/NavBar";
 import libertinusMono from "@/fonts/libertinus";
 import Footer from "./components/Footer";
 import StoreProvider from "./StoreProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
+// const geistSans = Geist({
+//   variable: "--font-geist-sans",
+//   subsets: ["latin"],
+// });
 
 const dancingScript = Dancing_Script({
   subsets: ["latin"],
@@ -17,10 +17,10 @@ const dancingScript = Dancing_Script({
   variable: "--font-dancing-script",
 });
 
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+// const geistMono = Geist_Mono({
+//   variable: "--font-geist-mono",
+//   subsets: ["latin"],
+// });
 
 export const metadata: Metadata = {
   title: "Create Next App",

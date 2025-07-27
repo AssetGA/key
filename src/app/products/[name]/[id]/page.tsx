@@ -4,23 +4,22 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 
-interface PageProps {
-  params: {
-    id: string;
-  };
-}
+type PageProps = {
+  params: Promise<{ id: string }>;
+};
 
-// export async function generateStaticParams() {
-//   const products: IProductType[] = await fetchProducts(); // Changed to array type
-//   return products.map((product) => ({
-//     id: product._id.toString(), // Ensure ID is string
-//   }));
-// }
+export async function generateStaticParams() {
+  const products: IProductType[] = await fetchProducts();
+  return products.map((product) => ({
+    // name: product.name.toLowerCase().replace(/\s+/g, "-"), // Convert to slug format
+    id: product._id.toString(),
+  }));
+}
 
 const Page = async ({ params }: PageProps) => {
   // Changed to PascalCase
   const { id } = await params;
-  const product: IProductType = await fetchProductById(id);
+  const product: IProductType | undefined = await fetchProductById(id);
   console.log("product", product);
   if (!product) {
     return (
@@ -93,15 +92,15 @@ const Page = async ({ params }: PageProps) => {
             </div>
 
             <div className="mt-4 space-y-4">
-              <p className="text-gray-600">{product.description}</p>
+              <p className="text-gray-600">{product.name}</p>
 
-              {product.features && (
+              {/* {product.features && (
                 <ul className="list-disc space-y-2 pl-5 text-gray-600">
                   {product.features.map((feature, i) => (
                     <li key={i}>{feature}</li>
                   ))}
                 </ul>
-              )}
+              )} */}
             </div>
 
             <div className="mt-6">
@@ -132,7 +131,7 @@ const Page = async ({ params }: PageProps) => {
             <div className="mt-8 border-t border-gray-200 pt-8">
               <h2 className="text-sm font-medium text-gray-900">Детали</h2>
               <div className="mt-4 space-y-4">
-                {product.details && (
+                {/* {product.details && (
                   <ul className="list-disc space-y-2 pl-5 text-gray-600">
                     {Object.entries(product.details).map(([key, value]) => (
                       <li key={key}>
@@ -140,7 +139,7 @@ const Page = async ({ params }: PageProps) => {
                       </li>
                     ))}
                   </ul>
-                )}
+                )} */}
               </div>
             </div>
           </div>
