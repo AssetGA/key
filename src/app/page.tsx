@@ -8,7 +8,7 @@ import Which from "./components/Which";
 
 export default function Home() {
   return (
-    <div>
+    <div className="w-full">
       <FrontWindow />
       <ListOfProducts />
       <Introducing />

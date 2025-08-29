@@ -40,7 +40,7 @@ export default function RootLayout({
       <body>
         <StoreProvider>
           <NavBar />
-          {children}
+          <div className="pt-20 md:pt-40">{children}</div>
           <Footer />
         </StoreProvider>
       </body>

@@ -2,27 +2,23 @@ import React from "react";
 import Protect from "../components/Protect";
 import AboutBlock from "../components/common/AboutBlock";
 import ProductSlider from "../components/common/ProductSlider";
-import Link from "next/link";
+import NavButtons from "../components/NavButtons";
+import { IProductType } from "../interface/interface";
+import { fetchProducts } from "../active/products";
 
-const products = [
-  { name: "Умный замок", img: "/img/1.jpg" },
-  { name: "Дверная ручка", img: "/img/2.jpg" },
-  { name: "WiFi контроллер", img: "/img/5.jpg" },
-  { name: "Модуль BLE", img: "/img/9.jpg" },
-  { name: "Сканер отпечатка", img: "/img/6.jpg" },
-  { name: "Цилиндр", img: "/img/7.jpg" },
-];
+const page = async () => {
+  const products: IProductType[] | undefined = await fetchProducts();
 
-const page = () => {
+  if (!products) {
+    return <div className="container mx-auto w-full">Product not found</div>; // Handle missing product
+  }
+
+  const getProductsByType = (type: string) =>
+    products.filter((elem) => elem.type === type);
+
   return (
-    <div className="container mx-auto w-full pt-45">
-      <ul className="flex flex-row">
-        <li className="mx-2">
-          <Link href="/">На главную</Link>
-        </li>
-        {" / "}
-        <li className="mx-2">Продукция</li>
-      </ul>
+    <main className="container mx-auto w-full mb-5">
+      <NavButtons type="products" />
       <Protect
         right={true}
         name="Защитите то, что важнее всего."
@@ -39,17 +35,28 @@ const page = () => {
             способом обеспечения безопасности вашего дома."
         image="/img/9.jpg"
       />
-      <ProductSlider products={products} />
+      {getProductsByType("smart").length > 0 && (
+        <ProductSlider products={getProductsByType("smart")} />
+      )}
       <AboutBlock
         right={false}
-        name="Умные замки сделаны простыми и безопасными."
-        description="Прекратите поиск ключей. Инновационные функции, интеграция с умным
-            домом и улучшенная безопасность делают замок с умной дверью простым
-            способом обеспечения безопасности вашего дома."
+        name="Замки проверенные временем"
+        description="Надежные замки которые мы рекомендуем. Они будут хранить ваше имущество и ваших близких."
         image="/img/9.jpg"
       />
-      <ProductSlider products={products} />
-    </div>
+      {getProductsByType("lock").length > 0 && (
+        <ProductSlider products={getProductsByType("lock")} />
+      )}
+      <AboutBlock
+        right={true}
+        name="Ручки для дверей комнатных"
+        description=""
+        image="/img/9.jpg"
+      />
+      {getProductsByType("handles").length > 0 && (
+        <ProductSlider products={getProductsByType("handles")} />
+      )}
+    </main>
   );
 };
 

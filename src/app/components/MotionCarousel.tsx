@@ -53,7 +53,7 @@ export default function Carousel({ products }: Props) {
               style={{ flex: `0 0 ${100 / items.length}%` }}
             >
               <div className="bg-white rounded-xl overflow-hidden shadow-2xl">
-                <div className="relative w-72 h-96">
+                <div className="relative w-32 h-46 md:w-72 md:h-96">
                   <Image
                     src={item.imageUrl}
                     alt={item.name}

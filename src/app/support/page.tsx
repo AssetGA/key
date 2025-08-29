@@ -1,16 +1,11 @@
-import Link from "next/link";
 import React from "react";
+import NavButtons from "../components/NavButtons";
 
 const page = () => {
   return (
     <div className="container mx-auto w-full pt-45">
-      <ul className="flex flex-row">
-        <li className="mx-2">
-          <Link href="/">На главную</Link>
-        </li>
-        {" / "}
-        <li className="mx-2">Продукция</li>
-      </ul>
+      <NavButtons type="support" />
+      {/* <ContactForm question="Необходима установка? Пишите" /> */}
     </div>
   );
 };

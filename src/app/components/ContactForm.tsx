@@ -2,7 +2,11 @@
 
 import { useState } from "react";
 
-export default function ContactForm() {
+type questionProps = {
+  question: string;
+};
+
+export default function ContactForm({ question }: questionProps) {
   const [phone, setPhone] = useState("");
   const [message, setMessage] = useState("");
   const [submitted, setSubmitted] = useState(false);
@@ -16,7 +20,7 @@ export default function ContactForm() {
 
   return (
     <div className="max-w-xl mx-auto p-6 bg-white rounded-2xl shadow-lg my-10">
-      <h2 className="text-2xl font-bold mb-4">Есть вопрос? Напишите нам</h2>
+      <h2 className="text-2xl font-bold mb-4">{question}</h2>
       {submitted ? (
         <p className="text-green-600 font-semibold">
           Спасибо! Мы свяжемся с вами в ближайшее время.

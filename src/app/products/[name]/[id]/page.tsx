@@ -1,7 +1,7 @@
 import { fetchProductById, fetchProducts } from "@/app/active/products";
+import NavButtons from "@/app/components/NavButtons";
 import { IProductType } from "@/app/interface/interface";
 import Image from "next/image";
-import Link from "next/link";
 import React from "react";
 
 type PageProps = {
@@ -20,29 +20,18 @@ const Page = async ({ params }: PageProps) => {
   // Changed to PascalCase
   const { id } = await params;
   const product: IProductType | undefined = await fetchProductById(id);
-  console.log("product", product);
+
   if (!product) {
     return (
       <div className="container mx-auto w-full pt-45">Product not found</div>
     ); // Handle missing product
   }
 
+  console.log("price", product);
+
   return (
-    <div className="container mx-auto w-full pt-45">
-      {/* Fixed pt-45 to standard value */}
-      <ul className="flex flex-row items-center">
-        {/* Added items-center for better alignment */}
-        <li className="mx-2 hover:underline">
-          <Link href="/">На главную</Link>
-        </li>
-        <li className="mx-2">/</li> {/* Better separation */}
-        <li className="mx-2 hover:underline">
-          <Link href="/products">Продукция</Link>
-        </li>
-        <li className="mx-2">/</li> {/* Better separation */}
-        <li className="mx-2 text-blue-700">{product.name || id}</li>{" "}
-        {/* Show product name if available */}
-      </ul>
+    <div className="container mx-auto w-full">
+      <NavButtons type="products" />
       {/* Add your product details rendering here */}
       <section className="container mx-auto px-4 py-8 sm:px-6 lg:px-8 lg:py-12">
         <div className="lg:grid lg:grid-cols-2 lg:gap-8">

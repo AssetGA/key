@@ -22,10 +22,10 @@
     "imageUrl": "/img/3.jpg"
   },
   {
-    "name": "аренда",
+    "name": "для аренды",
     "title": "Мне нужны простые в использовании замки для арендуемой недвижимости.",
     "description": "",
     "button": "знакомься",
-    "imageUrl": "/img/5.jpg"
+    "imageUrl": "/img/4.jpg"
   }
 ]
