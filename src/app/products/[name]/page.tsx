@@ -3,7 +3,6 @@ import NavButtons from "@/app/components/NavButtons";
 import ProductGrid from "@/app/components/ProductGrid";
 import Protect from "@/app/components/Protect";
 import { abouts } from "@/utils/abouts";
-import Link from "next/link";
 import React from "react";
 
 interface PageProps {

@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { Search } from "lucide-react";
+// import { Search } from "lucide-react";
 import { Menu, X } from "lucide-react";
 import Image from "next/image";
 import data from "@/utils/type.json"; // путь к файлу
@@ -96,7 +96,7 @@ export default function NavBar() {
         }`}
       >
         <ul className="flex flex-col space-y-4 px-6 text-2xl">
-          {menuItems.map((item, index) => (
+          {menuItems.map((item) => (
             <li key={item.href}>
               <button
                 className="w-full text-left text-gray-800 font-semibold hover:text-blue-600 active:text-blue-600 focus:text-blue-600"

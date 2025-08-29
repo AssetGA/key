@@ -1,6 +1,4 @@
-import Link from "next/link";
 import React from "react";
-import ToggleArrow from "../components/ToggleArrow";
 import NavButtons from "../components/NavButtons";
 
 const page = () => {

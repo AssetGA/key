@@ -23,9 +23,18 @@ const ProductSlider = ({ products }: Props) => {
   };
 
   useEffect(() => {
+    const element = scrollRef.current; // сохраняем ссылку
+
     checkScroll();
-    scrollRef.current?.addEventListener("scroll", checkScroll);
-    return () => scrollRef.current?.removeEventListener("scroll", checkScroll);
+    if (element) {
+      element.addEventListener("scroll", checkScroll);
+    }
+
+    return () => {
+      if (element) {
+        element.removeEventListener("scroll", checkScroll);
+      }
+    };
   }, []);
 
   const scroll = (direction: "left" | "right") => {
